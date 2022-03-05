@@ -1,0 +1,11 @@
+.video-display {
+  display: flex;
+  flex-direction: column;
+}
+.video-iframe {
+  width: 35vw;
+  height: 20vw;
+}
+.description {
+  width: 35vw;
+}

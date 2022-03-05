@@ -1,0 +1,9 @@
+.video-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.thumbnail {
+  width: 120px;
+  height: 90px;
+}

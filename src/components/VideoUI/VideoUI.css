@@ -1,0 +1,6 @@
+.video-ui {
+  display: flex;
+  justify-content: space-between;
+  width: 50vw;
+  gap: 20px;
+}
