@@ -7,6 +7,7 @@ import "./VideoUI.css";
 class VideoUI extends Component {
   state = { 
     selectedVideoId: "", 
+    selectedVideoTitle: "",
     selectedVideoDescription: "",
     videos: [] 
   };
@@ -22,6 +23,7 @@ class VideoUI extends Component {
 
       this.setState({ 
         selectedVideoId: items[0].id.videoId, 
+        selectedVideoTitle: items[0].snippet.channelTitle,
         selectedVideoDescription: items[0].snippet.description,
         videos: this.props.videos.data.items 
       });
@@ -34,15 +36,17 @@ class VideoUI extends Component {
 
       this.setState({ 
         selectedVideoId: items[0].id.videoId, 
+        selectedVideoTitle: items[0].snippet.channelTitle,
         selectedVideoDescription: items[0].snippet.description,
         videos: this.props.videos.data.items 
       });
     }
   }
 
-  onClickThumbnail = (videoId, videoDescription) => {
+  onClickThumbnail = (videoId, videoTitle, videoDescription) => {
     this.setState({
       selectedVideoId: videoId, 
+      selectedVideoTitle: videoTitle,
       selectedVideoDescription: videoDescription,
     });
   }
@@ -51,7 +55,8 @@ class VideoUI extends Component {
     return (
       <div className="video-ui">
         <VideoDisplay 
-          videoId={this.state.selectedVideoId} 
+          id={this.state.selectedVideoId}
+          title={this.state.selectedVideoTitle} 
           description={this.state.selectedVideoDescription} 
         />
         <VideoList videos={this.state.videos} click={this.onClickThumbnail} />

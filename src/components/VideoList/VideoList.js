@@ -11,7 +11,7 @@ const VideoList = (props) => {
   
       if (v && v.snippet) {
         thumb = <img
-                  onClick={() => props.click(v.id.videoId, v.snippet.description)} 
+                  onClick={() => props.click(v.id.videoId, v.snippet.channelTitle, v.snippet.description)} 
                   className="thumbnail"
                   key={v.id.videoId} 
                   src={v.snippet.thumbnails.default.url} />

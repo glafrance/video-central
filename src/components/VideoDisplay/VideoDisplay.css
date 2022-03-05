@@ -6,6 +6,10 @@
   width: 35vw;
   height: 20vw;
 }
+.title { 
+  margin-bottom: 10px;
+}
 .description {
+  margin-top: 0;
   width: 35vw;
 }
